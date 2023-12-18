@@ -1,43 +1,42 @@
-/* Reset some default browser styles */
 body {
+    background-color: #7E6551;
     margin: 0;
-    padding: 0;
-    font-family: Helvetica, sans-serif;
-    background-color: #ECE3CE;
-
 }
 
-/* Header styles */
 header {
-    background-color: #739072;
+    background-color: #E6CCBE;
     color: blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5px;
-
+    padding: 10px;
+    border-bottom: 2px solid white;
 }
 
 .logo img {
-    padding: 20px;
+    padding: 3px;
     height: auto;
-    width: 100px;
+    width: 250px;
     border-radius: 20%;
-   
-    
+}
 
+nav {
+    margin-left: auto;
 }
 
 nav ul {
-    list-style: ;
+    list-style: none;
     text-align: center;
     color: black;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 100px;
-    font-size: 20%
+    margin-right: 70px;
+    font-size: 20%;
+    border-radius: 10px;
+    transition: border 0.2s;
 }
 
 nav ul li a {
@@ -47,179 +46,269 @@ nav ul li a {
     font-size: 17px;
     font-family: century;
     transition: color 0.3s;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 nav ul li a:hover {
-    color: #F5EEC8;
-}
-
-/* Section styles */
-section {
-    display: flex;
-    align-items: center;
-    padding: 40px;
-
-
-
-}
-.image-container {
-    flex: 1;
-    text-align: center;
-
-
-}
-
-.image {
-    max-width: 70%;
-    height: auto;
+    color: white;
+    border: 2.5px solid #2C0703; 
     border-radius: 10px;
-    
+}
 
+.content {
+    display: flex;
+    height: 82vh;
 }
 
 .text-container {
     flex: 1;
-    text-align: left;
+    padding: 20px;
+    text-align: center;
 
 }
-.text {
-    font-family: "Gill Sans", sans-serif;
-    font-size: 20px;
-}
 
-#about h1 {
-    font-size: 24px;
-    color:#333;
-    font-weight: bold;
+.text-container h1 {
+    color: black;
+    transition: color 0.3s;
+    margin: 0;
+    font-size: 50px;
     text-align: center;
 }
-#about h4 {
-    text-align: left;
-}
-#about p {
-    text-align: right;
-}
-#about image-container{
-    height: 100px;
-}
+
+.text-container h1 span {
+    color: white; /* Set the color for "I craft" */
 }
 
-}
-.image {
-    filter: brightness(100%) contrast(150%);
-    transition: filter 0.5s ease; /* Add a smooth transition effect */
-}
-
-.image:hover {
-    filter: brightness(1.0%) contrast(100%);
-}
-#about li: {
-    text-align: right;
-    list-style: outside;
-}
-/* Example CSS for Services Section */
-#services {
-            background-color: #4F6F52;
-            padding: 40px;
-        }
-
-        /* Style the services container */
-.services {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* Style individual service items */
-.service {
+.image-container {
     flex: 1;
-    text-align: right;
-    padding: 20px;
-    border: 1px solid #3A4D39;
-    border-radius: 5px;
-    background-color: #739072;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Style service images */
-.service img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        /* Style service headings */
-.service h3 {
-            font-size: 20px;
-            margin: 10px 0;
-            text-align: center;
-            font color: white;
-
-        }
-
-        /* Style service descriptions */
-.service p {
-            font-size: 20px;
-            font color: white;
-
-        }
-#services p {
-    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
-#services .services {
+
+.picture {
+    width: 80%;
+    object-fit: cover;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; 
+    position: relative;
+
+}
+
+.social-icons a {
+    margin: 0 10px; 
+    font-size: 30px;
+    color: white;
+
+}
+
+
+#about {
+    background-color: #D9CBB7;
+    padding: 80px 0;
+
+}
+
+#about .content {
+    display: flex;
+    height: 82vh;
+}
+.row{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-#services .service {
-    flex:1;
-    text-align: center;
+.about-col-1{
+    flex-basis: 35%;
 }
-#services .service img {
-    max-width: 100%;
-    border-radius: 30%;
+.about-col-1 img{
+    width: 90%;
+    
+    border-radius: 15px;
 }
-.service-content{
-    padding: 50px;
-    border: 1px solid #ccc
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.about-col-1 h1{
+    color: #BBAB8C;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #7E6551;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
 }
 
-.servicecontent img{
-    max-width: 30px;
-    border-radius: 50%;
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
 }
-.service-content:hover{
-    background-color: #f1f1f1;
-    box-shadow: .service-content {
-    padding: 20px;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-content:hover {
-    background-color: yellow; /* Change to the desired color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-    transform: scale(1.05);
-}
-.h2 {
-    text-align: center;
-}
-
-.email-info {
-    text-align: left;
-    margin-top: 20px;
+.tab-contents ul li span{
+    color: #b45769 ;
     font-size: 16px;
-    color: #333;
-
+    
 }
-footer {
-    background-color: #739072;
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+#services{
+    padding: 30px 0;
+}
+#services h1{
+    font-size: 50px;
+    text-align: center;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #7E6551;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: : 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
     color: #fff;
-    text-align: bottom;
-    padding: 10px 0;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+#contact{
+    padding: 100px;
+}
+#contact h1{
+    color: #7E6551;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 20px;
+
+}
+.social-icon{
+    margin-top: 30px;
+
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #7E6551;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icon a:hover{
+    color: #ff004f;
+    transform: translate(-5px);
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #BBAB8C;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+.btn.btn2{
+    display: inline-block;
+    background: #7E6551;
+
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #BBAB8C;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
 }
 
+form.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
 
+}
 
-
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #7E6551;
+    font-weight: 300;
+    margin-top:20px;}
 
